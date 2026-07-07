@@ -80,9 +80,9 @@ aws ecr create-repository \
 # Expected output:
 # {
 #     "repository": {
-#         "repositoryArn": "arn:aws:ecr:us-east-1:002904791084:repository/retail-store/ui",
+#         "repositoryArn": "arn:aws:ecr:us-east-1:123456789012:repository/retail-store/ui",
 #         "repositoryName": "retail-store/ui",
-#         "repositoryUri": "002904791084.dkr.ecr.us-east-1.amazonaws.com/retail-store/ui"
+#         "repositoryUri": "123456789012.dkr.ecr.us-east-1.amazonaws.com/retail-store/ui"
 #     }
 # }
 ```
@@ -98,7 +98,7 @@ aws ecr create-repository \
 # Set your configuration
 AWS_REGION="us-east-1"
 ACCOUNT_ID=$(aws sts get-caller-identity --query Account --output text)
-GITHUB_REPO="SanthosVarahal/aws-devops-github-actions-ecr-argocd2"  # UPDATE with YOUR repo
+GITHUB_REPO="stacksimplify/aws-devops-github-actions-ecr-argocd3"  # UPDATE with YOUR repo
 ROLE_NAME="github-actions-oidc-role-ui3"
 
 # Verify variables are set correctly
@@ -158,7 +158,7 @@ aws iam create-role \
 # {
 #     "Role": {
 #         "RoleName": "github-actions-oidc-role-ui3",
-#         "Arn": "arn:aws:iam::002904791084:role/github-actions-oidc-role-ui3",
+#         "Arn": "arn:aws:iam::123456789012:role/github-actions-oidc-role-ui3",
 #         ...
 #     }
 # }
